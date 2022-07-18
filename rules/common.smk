@@ -47,7 +47,7 @@ def get_contigs():
 def get_fastq(wildcards):
     """Get fastq files of given sample-unit."""
     fastqs = units.loc[(wildcards.sample, wildcards.unit), ["fq1", "fq2"]].dropna()
-    if len(fastqs) == 2:
+    if len(fastqs) == 2
         return {"r1": fastqs.fq1, "r2": fastqs.fq2}
     return {"r1": fastqs.fq1}
 
